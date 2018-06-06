@@ -12,7 +12,7 @@ RUN ls -la /usr/src/initial
 RUN cd initial && mvn package
 
 # STAGE 2 - Test service 
-RUN apt-get update && apt-get install curl
+RUN apt-get update && apt-get install curl -y
 CMD ["java", -jar /usr/src/initial/target/gs-spring-boot-0.1.0.jar]
 RUN curl http://localhost:8080
 
