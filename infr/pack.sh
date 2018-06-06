@@ -15,7 +15,7 @@ RUN ls -la /usr/src/initial/target
 # STAGE 2 - Pack container
 FROM java:8-jdk
 
-EXPOSE 8080
+EXPOSE 80
 RUN mkdir app
 WORKDIR /app
 

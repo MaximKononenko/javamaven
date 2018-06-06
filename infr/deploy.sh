@@ -19,7 +19,7 @@ cat >> Dockerrun.aws.json << EOF
     },
     "Ports": [
     {
-        "ContainerPort": "8080"
+        "ContainerPort": "80"
     }
     ]
 }
