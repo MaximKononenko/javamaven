@@ -10,12 +10,12 @@ cat >> Dockerrun.aws.json << EOF
 {
     "AWSEBDockerrunVersion": "1",
     "Image": {
-        "Name": "nginx:latest",
+        "Name": "tomcat:alpine",
         "Update": "true"
     },
     "Ports": [
     {
-        "ContainerPort": "80"
+        "ContainerPort": "8080"
     }
     ]
 }
