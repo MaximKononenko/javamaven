@@ -17,7 +17,7 @@ FROM tomcat:alpine
 ENV VERSION 0.0.1
 COPY --from=BUILD /usr/src/initial/target/gs-spring-boot-0.1.0.jar /usr/local/tomcat/webapps/
 RUN ls -la /usr/local/tomcat/webapps/
-EXPOSE 8080/tcp
+EXPOSE 80/tcp
 
 EOF
 
