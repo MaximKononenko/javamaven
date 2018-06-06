@@ -5,7 +5,7 @@ tmpLog="tmp.log"
 
 cd app
 cat >> "Dockerfile" << EOF
-FROM 3.5.3-jdk-8-alpine as BUILD
+FROM tomcat:alpine as BUILD
 WORKDIR /usr/src/
 COPY . .
 RUN cd initial && mvn package
