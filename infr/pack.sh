@@ -8,17 +8,15 @@ cat >> "Dockerfile" << EOF
 FROM andreptb/maven:latest as BUILD
 WORKDIR /usr/src/
 COPY . .
-RUN ls -la /usr/src/initial
 RUN cd initial && mvn package
 
 # STAGE 2 - Test service 
 RUN apt-get update && apt-get install curl -y
-CMD ["java", -jar /usr/src/initial/target/gs-spring-boot-0.1.0.jar]
+RUN java -jar /usr/src/initial/target/gs-spring-boot-0.1.0.jar
 RUN curl http://localhost:8080
 
 # STAGE 3 - Pack container
 FROM java:8-jdk
-
 EXPOSE 80
 RUN mkdir app
 WORKDIR /app
