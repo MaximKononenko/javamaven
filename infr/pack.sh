@@ -5,7 +5,7 @@ tmpLog="tmp.log"
 
 cd app
 cat >> "Dockerfile" << EOF
-FROM maven:3.3-jdk-8 as BUILD
+FROM openjdk:10-jdk-slim as BUILD
 WORKDIR /usr/src/
 COPY . .
 RUN cd initial && mvn package
@@ -16,7 +16,7 @@ RUN cd initial && mvn package
 #RUN curl http://localhost:8080
 
 # STAGE 3 - Pack container
-FROM maven:3.3-jdk-8
+FROM openjdk:10-jdk-slim
 EXPOSE 80
 RUN mkdir app
 WORKDIR /app
