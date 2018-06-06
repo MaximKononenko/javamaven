@@ -11,9 +11,9 @@ COPY . .
 RUN cd initial && mvn package
 
 # STAGE 2 - Test service 
-RUN apt-get update && apt-get install curl -y
-RUN java -jar /usr/src/initial/target/gs-spring-boot-0.1.0.jar
-RUN curl http://localhost:8080
+#RUN apt-get update && apt-get install curl -y
+#RUN java -jar /usr/src/initial/target/gs-spring-boot-0.1.0.jar
+#RUN curl http://localhost:8080
 
 # STAGE 3 - Pack container
 FROM java:8-jdk
