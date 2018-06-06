@@ -13,12 +13,14 @@ RUN cd initial && mvn package
 RUN ls -la /usr/src/initial/target
 
 # STAGE 2 - Pack container
-FROM tomcat:alpine
-ENV VERSION 0.0.1
-COPY --from=BUILD /usr/src/initial/target/gs-spring-boot-0.1.0.jar /usr/local/tomcat/webapps/
-RUN ls -la /usr/local/tomcat/webapps/
-EXPOSE 8080/tcp
+FROM java:8-jdk
 
+EXPOSE 8080
+RUN mkdir app
+WORKDIR /app
+
+COPY --from=BUILD /usr/src/initial/target/gs-spring-boot-0.1.0.jar /app/
+ENTRYPOINT ["java", "-jar", "gs-spring-boot-0.1.0.jar"]
 EOF
 
 ecrlogin=$(~/.local/bin/aws ecr get-login --no-include-email --region us-east-1)
