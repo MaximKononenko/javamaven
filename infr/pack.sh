@@ -5,7 +5,7 @@ tmpLog="tmp.log"
 
 cd app
 cat >> "Dockerfile" << EOF
-FROM andreptb/maven:latest as BUILD
+FROM openjdk:8-jdk-alpine as BUILD
 WORKDIR /usr/src/
 COPY . .
 RUN cd initial && mvn package
@@ -16,7 +16,7 @@ RUN cd initial && mvn package
 #RUN curl http://localhost:8080
 
 # STAGE 3 - Pack container
-FROM andreptb/maven:latest
+FROM openjdk:8-jdk-alpine
 EXPOSE 80
 RUN mkdir app
 WORKDIR /app
