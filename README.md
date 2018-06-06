@@ -1,15 +1,15 @@
 # demoapp
 
-# Pls find demo (20min) of executing here: https://youtu.be/HGqouMyOX64
-# Github ref: https://github.com/MaximKononenko/demoapp
+Pls find demo (20min) of executing here: https://youtu.be/HGqouMyOX64
+Github ref: https://github.com/MaximKononenko/demoapp
 
 # This scripts are developed to deploy environment on AWS using EC2, EBS, ECR, CW and IAM services.
-# 
-# ./app - folder with app files
-# ./develop - not ready scripts. Not ready part of overall task like compose docker container with wordpress, CI scripts, smoke tests. 
-# ./infr - folder with scripts and configs
-# ./infr/.ebextentions - default EC2 instance configuration and  cloudwatch template. Using for updateEb.sh script.
-# ./infr/saved_configs - contains EBS config that can be used to change environment parameters and apply by using updateEb.sh.
+ 
+ ./app - folder with app files
+ ./develop - not ready scripts. Not ready part of overall task like compose docker container with wordpress, CI scripts, smoke tests. 
+ ./infr - folder with scripts and configs
+ ./infr/.ebextentions - default EC2 instance configuration and  cloudwatch template. Using for updateEb.sh script.
+ ./infr/saved_configs - contains EBS config that can be used to change environment parameters and apply by using updateEb.sh.
 
 
 1. Create environment
