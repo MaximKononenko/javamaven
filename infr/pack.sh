@@ -5,7 +5,7 @@ tmpLog="tmp.log"
 
 cd app
 cat >> "Dockerfile" << EOF
-FROM openjdk:8-jdk-alpine as BUILD
+FROM maven:3.3-jdk-8 as BUILD
 WORKDIR /usr/src/
 COPY . .
 RUN cd initial && mvn package
