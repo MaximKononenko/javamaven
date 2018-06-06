@@ -16,7 +16,7 @@ RUN cd initial && mvn package
 #RUN curl http://localhost:8080
 
 # STAGE 3 - Pack container
-FROM openjdk:8-jdk-alpine
+FROM maven:3.3-jdk-8
 EXPOSE 80
 RUN mkdir app
 WORKDIR /app
