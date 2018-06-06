@@ -16,7 +16,7 @@ RUN cd initial && mvn package
 #RUN curl http://localhost:8080
 
 # STAGE 3 - Pack container
-FROM mrebscher/alpinejdk8
+FROM andreptb/maven:latest
 EXPOSE 80
 RUN mkdir app
 WORKDIR /app
