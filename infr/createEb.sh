@@ -10,7 +10,7 @@ cat >> Dockerrun.aws.json << EOF
 {
     "AWSEBDockerrunVersion": "1",
     "Image": {
-        "Name": "java:8-jdk",
+        "Name": "nginx:latest",
         "Update": "true"
     },
     "Ports": [
