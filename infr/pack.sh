@@ -10,15 +10,18 @@ WORKDIR /usr/src/
 COPY . .
 RUN ls -la /usr/src/initial
 RUN cd initial && mvn package
-RUN ls -la /usr/src/initial/target
 
-# STAGE 2 - Pack container
+# STAGE 2 - Test service 
+RUN apt-get update && apt-get install curl
+CMD ["java", -jar /usr/src/initial/target/gs-spring-boot-0.1.0.jar]
+RUN curl http://localhost:8080
+
+# STAGE 3 - Pack container
 FROM java:8-jdk
 
 EXPOSE 80
 RUN mkdir app
 WORKDIR /app
-
 COPY --from=BUILD /usr/src/initial/target/gs-spring-boot-0.1.0.jar /app/
 ENTRYPOINT ["java", "-jar", "gs-spring-boot-0.1.0.jar"]
 EOF
