@@ -16,7 +16,7 @@ RUN cd initial && mvn package
 #RUN curl http://localhost:8080
 
 # STAGE 3 - Pack container
-FROM dockerfile/java:oracle-java8
+FROM openjdk:8
 EXPOSE 8080
 RUN mkdir app
 WORKDIR /app
