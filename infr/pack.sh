@@ -17,7 +17,7 @@ RUN cd initial && mvn package
 
 # STAGE 3 - Pack container
 FROM dockerfile/java:oracle-java8
-EXPOSE 80
+EXPOSE 8080
 RUN mkdir app
 WORKDIR /app
 COPY --from=BUILD /usr/src/initial/target/gs-spring-boot-0.1.0.jar /app/
