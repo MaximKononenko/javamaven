@@ -12,7 +12,7 @@ RUN cd initial && mvn package
 
 # STAGE 2 - Pack container
 #FROM openjdk:8
-FROM anapsix/alpine-java:latest
+FROM anapsix/8_jdk:latest
 EXPOSE 8080
 RUN mkdir app
 WORKDIR /app
