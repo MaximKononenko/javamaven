@@ -26,8 +26,8 @@ OptionSettings:
   aws:autoscaling:asg:
     Availability Zones: 'Any 2'
     Cooldown: '300'
-    MinSize: '1'
-    MaxSize: '1'
+    MinSize: '2'
+    MaxSize: '3'
 EnvironmentTier:
   Type: Standard
   Name: WebServer
