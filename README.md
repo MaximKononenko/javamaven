@@ -1,7 +1,10 @@
 # demoapp
 
-Pls find demo (20min) of executing here: https://youtu.be/HGqouMyOX64
-Github ref: https://github.com/MaximKononenko/demoapp
+Pls find demo (17min) of executing here: https://youtu.be/uPRqRJxorL4
+
+Github ref: https://github.com/MaximKononenko/javamaven
+
+AWS: https://killbarby.signin.aws.amazon.com/console (demoapp/demoapp)
 
 # This scripts are developed to deploy environment on AWS using EC2, EBS, ECR, CW and IAM services.
  
