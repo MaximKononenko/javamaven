@@ -12,7 +12,7 @@ RUN cd initial && mvn package
 
 # STAGE 2 - Pack container
 #FROM openjdk:8
-FROM java:8
+FROM openjdk:8-jre
 EXPOSE 8080
 RUN mkdir app
 WORKDIR /app
