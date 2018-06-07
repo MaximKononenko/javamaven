@@ -19,7 +19,6 @@ RUN cd initial && mvn package
 #FROM openjdk:8
 FROM alpine:3.2
 EXPOSE 8080
-EXPOSE 80
 RUN mkdir app
 WORKDIR /app
 COPY --from=BUILD /usr/src/initial/target/gs-spring-boot-0.1.0.jar /app/
