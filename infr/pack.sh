@@ -12,7 +12,7 @@ RUN cd initial && mvn package
 
 # STAGE 2 - Pack container
 #FROM openjdk:8
-FROM openjdk/8u171-jdk-nanoserver-sac2016
+FROM openjdk:8u171-jdk-nanoserver-sac2016
 EXPOSE 8080
 RUN mkdir app
 WORKDIR /app
