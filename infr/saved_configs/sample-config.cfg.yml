@@ -35,7 +35,7 @@ OptionSettings:
     UpperBreachScaleIncrement: '1'
     LowerThreshold: '60'
     LowerBreachScaleIncrement: '-1'
-
+    Period: '15'
 EnvironmentTier:
   Type: Standard
   Name: WebServer
