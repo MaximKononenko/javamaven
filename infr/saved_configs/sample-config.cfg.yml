@@ -28,6 +28,14 @@ OptionSettings:
     Cooldown: '300'
     MinSize: '1'
     MaxSize: '2'
+  aws:autoscaling:trigger:
+    MeasureName: CPUUtilization
+    Unit: Percent
+    UpperThreshold: '60'
+    UpperBreachScaleIncrement: '1'
+    LowerThreshold: '60'
+    LowerBreachScaleIncrement: '-1'
+
 EnvironmentTier:
   Type: Standard
   Name: WebServer
